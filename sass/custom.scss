@@ -317,3 +317,94 @@ body {
         }
     }
 }
+
+
+/** HERO SECTION **/
+#hero {
+    position: relative;
+    height: 650px;
+    margin: 80px 120px 0 162px;
+
+    .hero__text {
+        max-width: 574px;
+
+        h1 {
+            max-width: 460px;
+            font-size: 48px;
+            font-weight: 600;
+            line-height: 63px;
+        }
+
+        p {
+            font-size: 18px;
+            letter-spacing: 0.07px;
+            line-height: 22px;
+            color: #1D1D1D;
+            opacity: 0.6;
+            margin-top: 34px;
+        }
+    }
+
+    .hero__cta {
+        margin-top: 75px;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+
+        .hero__button {
+            position: relative;
+            width: 138px;
+            height: 138px;
+            border: 2px solid $additional-color;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+
+            img {
+                translate: 22% 0;
+                transition: scale .1s ease-in-out;
+            }
+
+            .line {
+                content: '';
+                position: absolute;
+                top: 50%;
+                right: 73%;
+                width: 200px;
+                height: 2px;
+                background-color: $additional-color;
+                transition: right .1s ease-in-out;
+            }
+
+            &:hover {
+                img {
+                    scale: 1.2;
+                }  
+
+                .line {
+                    right: 31%;
+                }
+            }
+        }
+
+        p {
+            width: 118px;
+            font-size: 18px;
+            letter-spacing: 0.07px;;
+            line-height: 22px;
+            color: $additional-color;
+
+            span {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    .hero__rectangles {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+    }
+}

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="807" height="681" viewBox="0 0 807 681">
+  <g id="Image" transform="translate(-513 -176)">
+    <g id="image-2" data-name="image" transform="translate(931 176)">
+      <path id="Rectangle_2" data-name="Rectangle 2" d="M59,0H389V208a58.946,58.946,0,0,1-59,59H59A58.946,58.946,0,0,1,0,208V59A58.946,58.946,0,0,1,59,0Z" fill="#9f9f9f"/>
+    </g>
+    <g id="image-3" data-name="image" transform="translate(1013 467)">
+      <path id="Rectangle_6" data-name="Rectangle 6" d="M70,0H237a69.936,69.936,0,0,1,70,70V390H70A69.936,69.936,0,0,1,0,320V70A69.936,69.936,0,0,1,70,0Z" fill="#9f9f9f"/>
+    </g>
+    <g id="image-4" data-name="image" transform="translate(513 467)">
+      <path id="Rectangle_7" data-name="Rectangle 7" d="M70,0H400a69.936,69.936,0,0,1,70,70V229a69.936,69.936,0,0,1-70,70H0V70A69.936,69.936,0,0,1,70,0Z" fill="#9f9f9f"/>
+    </g>
+  </g>
+</svg>
