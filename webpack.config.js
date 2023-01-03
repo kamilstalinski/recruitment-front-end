@@ -26,6 +26,7 @@ module.exports = {
   output: {
     path: `${__dirname}/dist`,
     filename: "js/main.js",
+    assetModuleFilename: "images/[name][ext]",
   },
   devServer: {
     hot: true,
@@ -70,14 +71,9 @@ module.exports = {
         loader: "html-loader",
       },
       {
-        test: /\.(jp?g|png|gif|svg)$/i,
+        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        type: "asset/resource",
         use: [
-          {
-            loader: "file-loader",
-            options: {
-              name: "img/[name].[ext]",
-            },
-          },
           {
             loader: "img-loader",
             options: {
