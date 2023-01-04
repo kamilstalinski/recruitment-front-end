@@ -7,10 +7,13 @@ $text-color: #1D1D1D;
 $additional-color: #0F6EFF;
 
 /** global **/
+html, body {
+    overflow-x: hidden;
+}
+
 body {
     background-color: $bg-color;
     font-family: "Poppins";
-    overflow-x: hidden;
 }
 
 .container {
@@ -27,10 +30,11 @@ body {
 // }
 
 .bg__blur {
+    display: none;
     position: absolute;
     top: 0;
-    right: -50%;
-    width: 50%;
+    right: 0%;
+    width: 100%;
     height: 100vh;
     backdrop-filter: blur(5px);
     z-index: 10;
@@ -38,7 +42,7 @@ body {
     z-index: 99;
 
     &.active {
-        right: 0;
+        display: block;
     }
 }
 
@@ -74,8 +78,13 @@ body {
             width: 142px;
         }
     }
+
     @media screen and (max-width: 990px) {
-        width: 100%;
+        width: 80%;
+    }
+
+    @media screen and (max-width: 950px) {
+        height: 750px;
     }
 
     @media screen and (max-width: 650px) {
@@ -135,7 +144,7 @@ body {
                     transition: .2s all ease-in-out;
                 }
 
-                &:hover {
+                &:hover, &.active {
                     color: $additional-color;
                     font-weight: 600;
 
@@ -250,7 +259,7 @@ body {
 
         &--left {
             .nav__links {
-                position: absolute;
+                position: fixed;
                 top: 0;
                 left: -73%;
                 width: 70%;
@@ -278,7 +287,7 @@ body {
         }
 
         &--right {
-            position: absolute;
+            position: fixed;
             bottom: 0;
             left: -70%;
             width: 70%;
@@ -495,7 +504,7 @@ body {
     }
 
     @media screen and (max-width: 1240px) {
-        
+        margin: 0 120px;
         .rect1 {
             width: 279px;
             right: 300px;
@@ -506,7 +515,7 @@ body {
         }
 
         .rect3 {
-            width: 308px;
+            width: 321px;
         }
     }
 
@@ -713,6 +722,7 @@ body {
             h1 {
                 font-size: 31px;
                 line-height: 41px;
+                margin-top: 20px;
             }
 
             p {
@@ -828,8 +838,8 @@ body {
         gap: 48px;
 
         .blog__item {
-            width: 290px;
-            min-width: 290px;
+            width: 100%;
+            max-width: 290px;
             height: 360px;
             border-radius: 40px 40px 0 40px;
             background-color: $base-color;
@@ -871,7 +881,7 @@ body {
 
                 .top {
                     font-size: 14px;
-                    font-weight: medium;
+                    font-weight: 500;
                     margin-bottom: 16px;
                 }
 
@@ -959,6 +969,153 @@ body {
             right: -93px;
             z-index: -1;
         }
+    }
+
+    @media screen and (max-width: 1240px) {
+        margin: 54px 120px 115px 120px;
+    }
+
+    @media screen and (max-width: 1150px) {
+        margin: 54px 40px 115px 40px;
+
+        &__items {
+            .blog__item--highlighted {
+                .circle {
+                    top: -30px;
+                    left: -20px;
+                    z-index: 1;
+                    width: 60px;
+                    height: 60px;
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 990px) {
+        &__items {
+            gap: 30px;
+
+            .blog__item {
+                padding: 30px;
+            }
+        }
+    }
+
+    @media screen and (max-width: 950px) {
+        margin: 100px 40px 115px 40px;
+    }
+
+    @media screen and (max-width: 830px) {
+        &__items {
+            gap: 20px;
+
+            .blog__item {
+                height: 300px;
+
+                header.secondary {
+                    margin-bottom: 15px;
+                }
+
+                hr {
+                    margin-bottom: 10px;
+                }
+
+                h3 {
+                    font-size: 12px !important;
+                }
+
+                p.blog__description {
+                    max-width: 230px;
+                    font-size: 14px;
+                    margin-bottom: 20px;
+                }
+
+                p.top {
+                    font-size: 12px !important;
+                }
+
+                p.bottom {
+                    font-size: 10px !important;
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 760px) {
+        &__heading {
+            h2 {
+                font-size: 30px;
+            }
+        }
+
+        &__items {
+            flex-wrap: wrap;
+            margin-left: 40px;
+
+            .blog__item {
+                width: 80%;
+                max-width: none;
+                height: 280px;
+
+                h3 {
+                    font-size: 14px !important;
+                }
+
+                p.blog__description {
+                    max-width: 230px;
+                    font-size: 16px;
+                    margin-bottom: 30px;
+                }
+
+                p.top {
+                    font-size: 14px !important;
+                }
+
+                p.bottom {
+                    font-size: 12px !important;
+                }
+            }
+        }
+
+        .blog__ellipse {
+            width: 60%;
+        }
+    }
+
+    @media screen and (max-width: 650px) {
+        margin-top: 60px;
+
+        .blog__heading h2::after {
+            right: -178px;
+            width: 143px;
+        }
+    }
+
+    @media screen and (max-width: 560px) {
+        .blog__heading h2 {
+            font-size: 25px;
+
+            &::after {
+                width: 120px;
+            }
+        }
+
+        &__items {
+            margin-left: 0;
+            gap: 20px;
+            .blog__item {
+                width: 100%;
+                max-width: none;
+            }
+
+            .blog__ellipse {
+                top: -250px;
+            }
+        }
+    }
+
+    @media screen and (max-width: 355px) {
+        margin: 100px 20px 115px 20px;
     }
 }
 
