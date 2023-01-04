@@ -89,6 +89,14 @@ body {
 
     @media screen and (max-width: 650px) {
         height: 720px;
+
+        &::after {
+            height: 102px;
+        }
+    }
+
+    @media screen and (max-width: 355px) {
+        height: 550px;
     }
 }
 
@@ -494,6 +502,7 @@ body {
         position: absolute;
         right: -55px;
         bottom: 114px;
+        z-index: -1;
     }
 
     @media screen and (max-width: 1365px) {
@@ -727,6 +736,7 @@ body {
 
             p {
                 font-size: 12px;
+                width: 82%;
             }
         }
     }
@@ -774,7 +784,8 @@ body {
     }
 
     @media screen and (max-width: 355px) {
-        padding-top: 20px;
+        height: 450px;
+        padding-top: 40px;
         margin: 0 20px;
 
         &__text {
@@ -1178,6 +1189,19 @@ body {
                 filter: invert(29%) sepia(97%) saturate(1837%) hue-rotate(207deg) brightness(97%) contrast(109%);
             }
 
+        }
+    }
+
+    @media screen and (max-width:1250px) {
+        .popup__wrapper {
+            width: 80%;
+        }
+    }
+
+    @media screen and (max-width:650px) {
+        .popup__wrapper {
+            width: 95%;
+            padding: 6% 8%;
         }
     }
 }

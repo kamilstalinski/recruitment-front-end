@@ -9,6 +9,10 @@ const closeBtn = document.querySelector(".close-btn");
 const b = document.body;
 const html = document.documentElement;
 
+const iframe = document.querySelector("iframe");
+
+console.log(iframe);
+
 export default function () {
   //handling opening and closing mobile menu navigation
   hamburger.addEventListener("click", (e) => {
