@@ -47,13 +47,17 @@
                     transition: .2s all ease-in-out;
                 }
 
-                &:hover, &.active {
+                &.active {
                     color: $additional-color;
                     font-weight: 600;
 
                     &::after {
                         opacity: 1;
                     }
+                }
+
+                &:hover {
+                    color: $additional-color;
                 }
             }
         }
