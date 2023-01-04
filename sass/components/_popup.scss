@@ -1,0 +1,75 @@
+/** POPUP **/
+#popup {
+    visibility: collapse;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(5px);
+    z-index: 999999;
+
+    &.active {
+        visibility: visible;
+    }
+
+    .popup__wrapper {
+        position: relative;
+        width: 60%;
+        background-color: $text-color;
+        padding: 4% 6%;
+        border-radius: 60px 60px 0 60px;
+        .iframe-container{
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%; 
+            height: 0;
+            border-radius: 10px;
+            overflow: hidden;
+
+            iframe{
+                position: absolute;
+                top:0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+              }
+        }
+
+        .close-btn {
+            position: absolute;
+            top: -15px;
+            right: -15px;
+            width: 50px;
+            height: 50px;
+            background-color: $base-color;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-self: center;
+            cursor: pointer;
+
+            img {
+                width: 40%;
+                filter: invert(29%) sepia(97%) saturate(1837%) hue-rotate(207deg) brightness(97%) contrast(109%);
+            }
+
+        }
+    }
+
+    @media screen and (max-width:1250px) {
+        .popup__wrapper {
+            width: 80%;
+        }
+    }
+
+    @media screen and (max-width:650px) {
+        .popup__wrapper {
+            width: 95%;
+            padding: 6% 8%;
+        }
+    }
+}
