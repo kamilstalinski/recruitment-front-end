@@ -10,7 +10,7 @@ $additional-color: #0F6EFF;
 body {
     background-color: $bg-color;
     font-family: "Poppins";
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 .container {
@@ -84,6 +84,8 @@ body {
 }
 
 
+
+
 /** NAVBAR **/
 .nav {
     display: flex;
@@ -115,6 +117,11 @@ body {
                 text-decoration: none;
                 position: relative;
                 transition: .2s all ease-in-out;
+
+                a {
+                    text-decoration: none;
+                    color: inherit;
+                }
 
                 &::after {
                     content: '';
@@ -773,6 +780,184 @@ body {
 
         &__rectangles {
             display: none;
+        }
+    }
+}
+
+/** BLOG SECTION **/
+.blog {
+    position: relative;
+    margin: 54px 120px 115px 196.5px;
+
+    .blog__ellipse {
+        position: absolute;
+        top: -160px;
+        right: 5px;
+        z-index: 12;
+    }
+
+    &__heading {
+        h3 {
+            font-size: 14px;
+            letter-spacing: 0.7px;
+            color: $additional-color;
+        }
+
+        h2 {
+            font-size: 36px;
+            font-weight: 600;
+            position: relative;
+            width: fit-content;
+
+            &::after {
+                content: '';
+                position: absolute;
+                bottom: 50%;
+                right: -283px;
+                width: 220px;
+                height: 2px;
+                background-color: $additional-color;
+            }
+        }
+    }
+
+    &__items {
+        position: relative;
+        margin-top: 77px;
+        display: flex;
+        gap: 48px;
+
+        .blog__item {
+            width: 290px;
+            min-width: 290px;
+            height: 360px;
+            border-radius: 40px 40px 0 40px;
+            background-color: $base-color;
+            padding: 38px 41px;
+
+            .secondary {
+                display: flex;
+                align-items: center;
+                gap: 19.5px;
+                margin-bottom: 25.5px;
+
+                .circle {
+                    width: 50px;
+                    height: 50px;
+                    background-color: #9F9F9F;
+                    border-radius: 50%;
+                }
+
+                h3 {
+                    font-size: 14px;
+                    font-weight: 600;
+                    margin-bottom: 5px;
+                }
+
+                p {
+                    font-size: 14px;
+                    opacity: .7;
+                }
+            }
+
+            hr {
+                color: #1D1D1D;
+                opacity: .1;
+                margin-bottom: 21px;
+            }
+
+            .blog__description {
+                margin-bottom: 10px;
+
+                .top {
+                    font-size: 14px;
+                    font-weight: medium;
+                    margin-bottom: 16px;
+                }
+
+                .bottom {
+                    font-size: 12px;
+                    opacity: .7;
+                }
+            }
+
+            button {
+                font-size: 12px;
+                
+                a {
+                    color: $additional-color;
+                }
+            }
+        }
+
+        .blog__item--highlighted {
+            position: relative;
+            background-color: #1D1D1D;
+            color: $base-color;
+
+            header {
+                margin-bottom: 24.5px;
+                h3 {
+                    font-size: 14px;
+                    font-weight: 600;
+                    margin-bottom: 10px;
+                }
+
+                p {
+                    font-size: 14px;
+                    opacity: .7;
+                }
+            }
+
+            .blog__description {
+                margin-bottom: 61px;
+                font-size: 18px;
+                font-weight: 500;
+                line-height: 29px;
+                max-width: 170px;
+            }
+            
+            button {
+                position: relative;
+                width: 59px;
+                height: 59px;
+                font-size: 12px;
+                border: 1px solid $base-color;
+                border-radius: 50%;
+                color: $base-color;
+
+                span {
+                    text-decoration: underline;
+                }
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    bottom: 50%;
+                    left: -233px;
+                    width: 220px;
+                    height: 1px;
+                    background-color: $base-color;
+                }
+            }
+
+            .circle {
+                position: absolute;
+                top: 0;
+                left: -75px;
+                width: 100px;
+                height: 100px;
+                background: $base-color;
+                border-radius: 50%;
+                z-index: -1;
+            }
+        }
+
+        .ellipse3 {
+            position: absolute;
+            top: 0;
+            right: -93px;
+            z-index: -1;
         }
     }
 }
